@@ -14,11 +14,11 @@ you can use my library for arduino or stm32 project.
   ```
 ## Getting start
 - First you need create PID_FACTOR about (Kp, Ki and Kd). My struct are 2 ways to declar.
-  - 1:
+  - Way 1:
     ```C
     PID_FACTOR* myPIDFactor = PID_FACTOR__Create(10, 20, 0.01);
     ```
-  - 2:
+  - Way 2:
     ```C
     PID_FACTOR myPIDFactor;
     //...
@@ -26,11 +26,11 @@ you can use my library for arduino or stm32 project.
     PID_FACTOR__Init(&myPIDFactor, 10, 20, 0.01);
     ```
 - Now you can create PID. You can use one of two way to do it.
-  - 1:
+  - Way 1:
     ```C
     STATUS PID__Init(PID* _myPID, PID_FACTOR* _myFactors,unsigned int* _in,double* _out,double _setPoint, PID_OUT_LIMIT _limit);				 
     ```
-  - 2:
+  - Way 2:
     ```C
     PID* PID__Create(PID_FACTOR* _myFactors, unsigned int* _in, double* _out, double _setPoint, PID_OUT_LIMIT _limit);  								
     ```
