@@ -1,5 +1,5 @@
 # PID library
-this library implement pid control.
+This library implement pid control.
 ## Introduction
 You can use my library for arduino or stm32 project.
 ## Advantages
