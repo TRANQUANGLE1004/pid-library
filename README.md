@@ -67,4 +67,5 @@ you can use my library for arduino or stm32 project.
 ## Reference
 - [PID controler Matlab Techtak](https://www.youtube.com/watch?v=wkfEZmsQqiA&t=72s)
 - [Arduino-PID-Library](https://github.com/br3ttb/Arduino-PID-Library/)
+- [PID controler WIKI](https://en.wikipedia.org/wiki/PID_controller)
 ## Thank you !!! 
