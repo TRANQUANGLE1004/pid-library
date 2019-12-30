@@ -30,6 +30,7 @@ you can use my library for arduino or stm32 project.
     ```C
     STATUS PID__Init(PID* _myPID, PID_FACTOR* _myFactors,unsigned int* _in,double* _out,double _setPoint, PID_OUT_LIMIT _limit);				 
     ```
+    STATUS can return FAILED when you doesn't init _myPID @@.
   - Way 2:
     ```C
     PID* PID__Create(PID_FACTOR* _myFactors, unsigned int* _in, double* _out, double _setPoint, PID_OUT_LIMIT _limit);  								
