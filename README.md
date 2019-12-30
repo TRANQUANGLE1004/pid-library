@@ -37,6 +37,14 @@ you can use my library for arduino or stm32 project.
     ```C
     PID__Init(&myPID, &myPIDFactor, myEncoder.pulse, &pidOut,50, (PID_OUT_LIMIT){ -500, 500 });			 
     ```
+- After you turn on flag isUseOutputLimit if you want limit your output.
+    ```C
+    PID__OnOutputLimitFlag(&myPID);
+    ```
+   Default PID don't use limit output. But i want use it to protect system. Output high can damaged hardware.  
+- IMPORTANCE: 
+  - You must change FREQUENCY_UPDATE_PID in pid.h. This is frequency i caculate out and update value.
+
 - Now you can create PID. You can use one of two way to do it.
   - Way 1:
     ```C
