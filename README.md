@@ -12,6 +12,18 @@ you can use my library for arduino or stm32 project.
   ```C
   _myPID->sumErr += _myPID->err*(double)PERIOD_UPDATE_PID;
   ```
-
+## Getting start
+- first you need create PID_FACTOR about (Kp, Ki and Kd). My struct are 2 ways to declar.
+  - 1:
+    ```C
+    PID_FACTOR* myPIDFactor = PID_FACTOR__Create(10, 20, 0.01);
+    ```
+  - 2:
+    ```C
+    PID_FACTOR myPIDFactor;
+    //...
+    //...
+    PID_FACTOR__Init(&myPIDFactor, 10, 20, 0.01);
+    ```
 
 
