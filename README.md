@@ -35,4 +35,6 @@ you can use my library for arduino or stm32 project.
     ```C
     PID* PID__Create(PID_FACTOR* _myFactors, unsigned int* _in, double* _out, double _setPoint, PID_OUT_LIMIT _limit);  								
     ```
-- Why i use pointer PID_FACTOR, input and output?.You can change your PID_FACTOR anytime.Input and Output can change anytime, you can't use a timer for update it.
+- Why i use pointer PID_FACTOR, input and output? You can change your PID_FACTOR anytime.Input and Output can change anytime, you can't use a timer for update it.
+
+## Detail Code
