@@ -61,6 +61,10 @@ you can use my library for arduino or stm32 project.
 - Why i use pointer PID_FACTOR, input and output? You can change your PID_FACTOR anytime.Input and Output can change anytime, you can't use a timer for update it.
 
 ## Update in future
-- I want implement a low pass filter for sensor(input) because noise can make wrong ouput. Exemple i use 1000Hz update and caculate output but noise can make a high frequency => derivite so high and Wrong. So i can research in future.
+- I want implement a low pass filter for sensor(input) because noise can make wrong ouput. Exemple i use 1000Hz update and caculate output but noise can make a high frequency => derivite so high and Wrong. So i research in future.
 - You can implement low pass filter by electrical in [low pass filter](https://www.electronics-tutorials.ws/filter/filter_2.html)
-
+- I want to make a auto turning.
+## Reference
+- [PID controler Matlab Techtak](https://www.youtube.com/watch?v=wkfEZmsQqiA&t=72s)
+- [Arduino-PID-Library] (https://github.com/br3ttb/Arduino-PID-Library/)
+## Thank you !!! 
