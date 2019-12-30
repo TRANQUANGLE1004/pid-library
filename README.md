@@ -8,5 +8,10 @@ you can use my library for arduino or stm32 project.
   ```C
   _myPID->sumErr += _myPID->err*(double)PERIOD_UPDATE_PID + 0.5*(_myPID->lastErr - _myPID->err)*(double)PERIOD_UPDATE_PID;
   ```
+  instead of:
+  ```C
+  _myPID->sumErr += _myPID->err*(double)PERIOD_UPDATE_PID;
+  ```
+
 
 
