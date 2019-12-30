@@ -25,15 +25,30 @@ you can use my library for arduino or stm32 project.
     //...
     PID_FACTOR__Init(&myPIDFactor, 10, 20, 0.01);
     ```
+- Next step is delar PID_OUT_LIMIT
+  - You can init similar declar PID_FACTOR.
+    ```C
+    PID_OUT_LIMIT myLimit;
+    //...
+    //...
+    PID_OUT_LIMIT__Init(myLimit,double _min,double _max);
+    ```
+    Or you cannot declar it, and you use (PID_OUT_LIMIT){ -500, 500 } add to PID declar:
+    ```C
+    PID__Init(&myPID, &myPIDFactor, myEncoder.pulse, &pidOut,50, (PID_OUT_LIMIT){ -500, 500 });			 
+    ```
 - Now you can create PID. You can use one of two way to do it.
   - Way 1:
     ```C
-    STATUS PID__Init(PID* _myPID, PID_FACTOR* _myFactors,unsigned int* _in,double* _out,double _setPoint, PID_OUT_LIMIT _limit);				 
+    PID myPID;
+    //...
+    //...
+    PID__Init(&myPID, &myPIDFactor, myEncoder.pulse, &pidOut,50, (PID_OUT_LIMIT){ -500, 500 });			 
     ```
-    STATUS can return FAILED when you doesn't init _myPID @@.
+
   - Way 2:
     ```C
-    PID* PID__Create(PID_FACTOR* _myFactors, unsigned int* _in, double* _out, double _setPoint, PID_OUT_LIMIT _limit);  								
+    PID* myPID = PID__Create(&myPIDFactor, myEncoder.pulse, &pidOut,50, (PID_OUT_LIMIT){ -500, 500 });								
     ```
 - Why i use pointer PID_FACTOR, input and output? You can change your PID_FACTOR anytime.Input and Output can change anytime, you can't use a timer for update it.
 
